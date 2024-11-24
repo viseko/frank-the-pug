@@ -1,0 +1,17 @@
+mixin btn-more(data={})
+  if (data.href)
+    a.btn-more(
+      href=data.href
+      class=data.className
+      target=(data.blank ? "_blank" : null)
+      rel=(data.blank ? "noopener noreferrer" : null)
+    )!=data.text
+  else
+    button.btn-more(
+      type=(data.type || "button")
+      class=data.className
+      class=(data.theme ? `btn--${data.theme}` : null)
+      class=(data.size ? `btn--${data.size}` : null)
+      disabled=data.disabled
+      data-role=data.role
+    )!=data.text

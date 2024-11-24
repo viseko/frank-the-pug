@@ -1,0 +1,15 @@
+.inner-header {
+  padding-top: 56px;
+
+  @media (max-width: $lg) {
+    padding-top: 40px;
+  }
+
+  @media (max-width: $sm) {
+    padding-top: 24px;
+  }
+
+  &__title {
+    text-align: center;
+  }
+}

@@ -1,0 +1,11 @@
+table:not(.reset-table) {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+
+  td,
+  th {
+    padding: 1rem;
+    border: 1px solid #ccc;
+  }
+}

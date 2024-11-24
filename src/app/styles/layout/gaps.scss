@@ -1,0 +1,83 @@
+@for $i from 1 through 5 {
+  .gap-#{$i} {
+    gap: #{$i}rem;
+  }
+
+  .gap-y-#{$i} {
+    row-gap: #{$i}rem;
+  }
+
+  .gap-x-#{$i} {
+    column-gap: #{$i}rem;
+  }
+
+  @media (max-width: $xl) {
+    .gap-yl-#{$i} {
+      gap: #{$i}rem;
+    }
+
+    .gap-y-xl-#{$i} {
+      row-gap: #{$i}rem;
+    }
+  
+    .gap-x-xl-#{$i} {
+      column-gap: #{$i}rem;
+    }
+  }
+
+  @media (max-width: $lg) {
+    .gap-lg-#{$i} {
+      gap: #{$i}rem;
+    }
+
+    .gap-y-lg-#{$i} {
+      row-gap: #{$i}rem;
+    }
+  
+    .gap-x-lg-#{$i} {
+      column-gap: #{$i}rem;
+    }
+  }
+
+  @media (max-width: $md) {
+    .gap-md-#{$i} {
+      gap: #{$i}rem;
+    }
+
+    .gap-y-md-#{$i} {
+      row-gap: #{$i}rem;
+    }
+  
+    .gap-x-md-#{$i} {
+      column-gap: #{$i}rem;
+    }
+  }
+
+  @media (max-width: $sm) {
+    .gap-sm-#{$i} {
+      gap: #{$i}rem;
+    }
+
+    .gap-y-sm-#{$i} {
+      row-gap: #{$i}rem;
+    }
+  
+    .gap-x-sm-#{$i} {
+      column-gap: #{$i}rem;
+    }
+  }
+
+  @media (max-width: $xs) {
+    .gap-ys-#{$i} {
+      gap: #{$i}rem;
+    }
+
+    .gap-y-xs-#{$i} {
+      row-gap: #{$i}rem;
+    }
+  
+    .gap-x-xs-#{$i} {
+      column-gap: #{$i}rem;
+    }
+  }
+}

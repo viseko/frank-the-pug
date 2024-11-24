@@ -1,0 +1,128 @@
+.field {
+  position: relative;
+  width: 100%;
+
+  &__input,
+  &--date &__date-output {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid $cl-black;
+    border-radius: 8px;
+    outline: 0;
+    font-size: 16px;
+    line-height: 24px;
+
+    // &:hover {
+    // }
+
+    // &:focus {
+    // }
+
+    &:disabled {
+      opacity: 0.5;
+      background-color: rgba($cl-black, 10%);
+    }
+
+    &::placeholder {
+      font-size: inherit;
+      line-height: inherit;
+    }
+
+    // Убираем стандартные стрелки для input:number
+    &[type="number"] {
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+      }
+    }
+  }
+
+  &._success &__input,
+  &._success &__date-output {
+    border-color: $cl-success;
+  }
+
+  &._error &__input,
+  &._error &__date-output {
+    border-color: $cl-error;
+  }
+
+  &__error {
+    display: none;
+    font-size: 10px;
+    line-height: 16px;
+    color: $cl-error;
+  }
+
+  &._error &__error {
+    display: block;
+  }
+
+  &--padding-right &__input {
+    padding-right: 48px;
+  }
+
+  &__password-button {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $cl-primary;
+    }
+
+    .field._has-value .field__input:not(:disabled) ~ & {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+
+  &__password-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    &--hide {
+      display: none;
+    }
+
+    .field._show &--show {
+      display: none;
+    }
+
+    .field._show &--hide {
+      display: block;
+    }
+  }
+
+  &--date &__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &__date-output {
+    height: 56px;
+  }
+
+  :disabled ~ &__date-output {
+    opacity: 0.5;
+    background-color: rgba($cl-black, 10%);
+  }
+}

@@ -1,0 +1,44 @@
+[class*="flex-"] {
+  display: flex;
+}
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-center-x {
+  align-items: center;
+}
+
+.flex-center-y {
+  justify-content: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-column-rev {
+  flex-direction: column-reverse;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-row-rev {
+  flex-direction: row-reverse;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-wrap-rev {
+  flex-wrap: wrap-reverse;
+}
+
+.noshrink {
+  flex-shrink: 0;
+}

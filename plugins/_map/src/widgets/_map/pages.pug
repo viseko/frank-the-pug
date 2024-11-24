@@ -1,0 +1,13 @@
+mixin map-pages
+  section#pages(
+    data-group="Общее"
+    data-name="Страницы",
+  )
+    .container.ui-kit__container
+      if (pages)
+        ul 
+          each page in pages 
+            li 
+              -var link = page[0] + ".html"
+              -var name = page[1]
+              a(href=link) #{name} (#{link}) 

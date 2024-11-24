@@ -1,0 +1,30 @@
+.btn-more {
+  display: block;
+  width: 100%;
+  padding: 0;
+  color: $cl-black;
+  text-align: center;
+  font-size: 20px;
+  line-height: 48px;
+  white-space: nowrap;
+  background-color: lighten($cl-black, 90%);
+  border: 0;
+  border-radius: 12px;
+  transition: background-color 0.3s;
+
+  &[href] {
+    text-decoration: none;
+  }
+
+  &:hover:not(:disabled) {
+    background-color: lighten($cl-black, 80%);
+  }
+
+  &:active:not(:disabled) {
+    opacity: 0.7;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}

@@ -1,0 +1,9 @@
+.tab-nav {
+  display: flex;
+  gap: 32px;
+  width: fit-content;
+
+  @media (max-width: $xs) {
+    gap: 20px;
+  }
+}

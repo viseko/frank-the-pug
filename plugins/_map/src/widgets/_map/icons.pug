@@ -1,0 +1,26 @@
+mixin map-icons
+  section#icons(
+    data-group="Общее"
+    data-name="Иконки",
+  )
+    .container.ui-kit__container
+      .ui-block 
+        - 
+          var icons = [
+            "close",
+            "play",
+            "chevron-right",
+            "chevron-left",
+            "eye",
+            "eye-off",
+            "spinner",
+            "star",
+            "edit",
+            "search"
+          ]
+        
+        .grid-5.grid-lg-4.grid-sm-2.gap-2
+          each item in icons
+            .flex-center-x.gap-1
+              +icon(item, 24, 24)
+              span!=item

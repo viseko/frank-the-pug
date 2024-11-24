@@ -1,0 +1,104 @@
+.field-code {
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+
+  &__cells {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 16px;
+
+    ._error & {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    border-radius: 8px;
+    background-color: #eee;
+    transition: 0.1s;
+
+    &._focus {
+      color: $cl-primary;
+      box-shadow: inset 0 0 0 1px $cl-primary;
+    }
+
+    ._error & {
+      box-shadow: inset 0 0 0 1px $cl-error;
+    }
+  }
+
+  &__link span {
+    display: none;
+  }
+
+  &__error {
+    display: none;
+    color: $cl-error;
+    font-size: 12px;
+    line-height: 16px;
+
+    ._error & {
+      display: block;
+    }
+  }
+
+  // AWAIT
+  &._await &__cells,
+  &._await &__link {
+    display: none;
+  }
+
+  &__spinner {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  &__spinner svg {
+    display: none;
+    width: 48px;
+    height: 48px;
+    color: $cl-primary;
+    transform-origin: center;
+    animation: rotate 4s infinite linear;
+
+    ._await & {
+      display: block;
+    }
+  }
+
+  &__await-text {
+    display: none;
+    font-size: 16px;
+    line-height: 32px;
+
+    ._await & {
+      display: block;
+    }
+
+    @media (max-width: $sm) {
+      display: block;
+      font-size: 12px;
+      line-height: 24px;
+    }
+  }
+
+  // TIMEOUT
+  &._timeout &__link {
+    color: #333;
+    pointer-events: none;
+    user-select: none;
+
+    span {
+      display: inline;
+    }
+  }
+}

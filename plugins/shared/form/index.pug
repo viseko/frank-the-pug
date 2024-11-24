@@ -1,0 +1,11 @@
+mixin form(data={})
+  form.js-form(
+    class=data.className
+    action=(data.action || "https://echo.htmlacademy.ru")
+    name=data.name
+    method=data.method
+    id=data.id
+  )
+    block
+    if (data.success)
+      +form-success

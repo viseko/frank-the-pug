@@ -1,0 +1,20 @@
+mixin radio-button(data={})
+  label.checkbox.checkbox--radio(
+    class=data.className,
+    class=(data.theme ? `checkbox--theme--${data.theme}` : null),
+    class=(data.size ? `checkbox--size--${data.size}` : null),
+    data-role=data.role,
+  )
+    input.checkbox__input.visually-hidden(
+      type="radio",
+      name=data.name,
+      value=data.value,
+      checked=data.checked
+      required=data.required
+      disabled=data.disabled
+      )
+    span.checkbox__cell
+      svg(xmlns='http://www.w3.org/2000/svg' fill='none' viewbox='0 0 14 11' width="14" height="11")
+        path(stroke='currentColor' stroke-width='2' d='m1 5 4 4 8-8')
+    small.checkbox__label!=data.label
+  

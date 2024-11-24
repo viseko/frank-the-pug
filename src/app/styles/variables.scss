@@ -1,0 +1,43 @@
+// Цветовая палитра
+$cl-white: #ffffff;
+$cl-black: #000000;
+$cl-primary: #2168DE;
+$cl-success: #4d8a27;
+$cl-error: #c02424;
+
+// Контрольные точки
+$xs: 400px;
+$sm: 576px; // mobile
+$md: 768px; 
+$lg: 992px; // tablet
+$xl: 1200px; // desktop
+$xxl: 1400px;
+
+// Базовые размеры
+$rem: 8px; // единица модульной сетки
+$min-width: 320px; // мин. ширина контейнера
+$container-width: 1328px; // макс. шиирина контейнера
+
+// Текст
+$font-family: helvetica, arial, sans-serif; // Шрифт по умолчанию
+$font-size: 2rem; // кегль на десктопе
+$font-size-sm: 16px; // кегль на мобилках
+$line-height-sm: 3rem; // интерлиньяж на мобилках
+$line-height: 4rem; // интерлиньяж на десктопе
+$p-margin: 3rem; // отступы между абзацев
+
+// Анимации и переходы
+$bezier: cubic-bezier(0, 0, 0.4, 1); // станд. функция перехода
+
+// CSS-переменные
+:root {
+  --container-padding: 40px;
+
+  @media (max-width: $xl) {
+    --container-padding: 24px;
+  }
+
+  @media (max-width: $md) {
+    --container-padding: 16px;
+  }
+}

@@ -1,0 +1,4 @@
+mixin tab-nav(data={})
+  .tab-nav.js-tab-nav(class=data.className data-bind=data.bind)
+    each button in data.list
+      +tab-button({text: button})

@@ -1,0 +1,77 @@
+mixin map-form-checkbox
+  section#form-checkbox(
+    data-group="Формы"
+    data-name="Чекбоксы и прочие переключатели",
+  )
+    .container.ui-kit__container
+      .ui-block 
+        h2 checkbox
+        .grid-5.grid-md-2.gap-3.mb-5
+          +checkbox({
+            name: "checkbox",
+            value: "checked",
+            label: "default"
+          })
+          +checkbox({
+            name: "checkbox",
+            checked: true,
+            value: "checked",
+            label: "checked"
+          })
+          +checkbox({
+            name: "checkbox",
+            value: "disabled",
+            label: "disabled",
+            disabled: true
+          })
+          +checkbox({
+            name: "checkbox",
+            checked: true,
+            value: "disabled checked",
+            label: "disabled checked",
+            disabled: true
+          })
+      .ui-block
+        h2 radio-button
+        .grid-5.grid-md-2.gap-3.mb-5
+          +radio-button({
+            name: "radio-1",
+            checked: false,
+            label: "default"
+          })
+          +radio-button({
+            name: "radio-1",
+            checked: true,
+            label: "checked"
+          })
+          +radio-button({
+            name: "radio-2",
+            checked: false,
+            label: "disabled",
+            disabled: true
+          })
+          +radio-button({
+            name: "radio-2",
+            checked: true,
+            label: "disabled checked",
+            disabled: true
+          })
+      .ui-block
+        h2 switcher
+        .grid-5.grid-md-2.gap-3.mb-5
+          +switcher({
+            label: "default"
+          })
+          +switcher({
+            checked: true,
+            label: "checked"
+          })
+          +switcher({
+            label: "disabled",
+            disabled: true
+          })
+          +switcher({
+            checked: true,
+            label: "disabled checked",
+            disabled: true
+          })

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 26 26" id="chevron-left">
+    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+      d="M16.38 4.88 8.26 13l8.12 8.13" />
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 26 26" id="chevron-right">
+    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+      d="M9.75 4.88 17.88 13l-8.13 8.13" />
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" id="chevron-down">
+    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 6 5 5m5-5-5 5"/>
+  </symbol>
+  <symbol id="close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4.5 4.5L19.5 19.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M19.5 4.5L4.5 19.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20" id="play">
+    <path fill="currentColor" d="M.7 19.8V.2L17.5 10 .7 19.8Z" />
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" id="eye-off">
+    <path fill="currentColor" d="M3.1 2.2a.7.7 0 1 0-1 1l1.7 1.6c-1 .7-1.8 1.7-2.4 2.9v.6c1.4 2.9 4 4.4 6.6 4.4 1 0 2-.3 3-.7l1.9 1.8a.7.7 0 1 0 .9-1L3.1 2.3Zm7 8.8-2.1.3c-2 0-4-1-5.2-3.3.5-1 1.2-1.7 2-2.3l1.4 1.4a2 2 0 0 0 2.7 2.7L10 11Zm2.3-1.7.8-1.3a6 6 0 0 0-5.4-3.3L6.6 3.5 8 3.3c2.6 0 5.2 1.5 6.6 4.4v.6l-1.3 2-1-1Z"/>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" id="eye">
+    <path fill="currentColor" d="M10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"/>
+    <path fill="currentColor" d="M14.6 7.7A7.4 7.4 0 0 0 8 3.3a7.4 7.4 0 0 0-6.6 4.4v.6c1.4 2.9 4 4.4 6.6 4.4 2.6 0 5.2-1.5 6.6-4.4v-.6ZM8 11.3c-2 0-4-1-5.2-3.3A6 6 0 0 1 8 4.7c2 0 4 1 5.2 3.3A6 6 0 0 1 8 11.3Z"/>
+  </symbol> 
+  <symbol id="spinner" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 48 48">
+    <path fill="currentColor"
+      d="M45.2 33.3a23.5 23.5 0 0 1-12.9 12.5l-2.9-7.6a15.3 15.3 0 0 0 8.5-8.2l7.3 3.3ZM26.4 47.2a23.1 23.1 0 0 1-17.9-5.7l5.3-6.1a15.2 15.2 0 0 0 11.7 3.7l.9 8.1ZM4.9 37.5a23.6 23.6 0 0 1-4-17.6l8 1.4a15.5 15.5 0 0 0 2.6 11.5l-6.6 4.7Zm-2.4-23c2.4-5.7 7-10.2 12.8-12.6l3 7.6a15.3 15.3 0 0 0-8.4 8.2l-7.4-3.2ZM21.2.4a23 23 0 0 1 17.2 5l-5 6.3A15.2 15.2 0 0 0 22 8.5l-1-8Zm21.5 9.5c3.7 5 5.2 11.3 4.2 17.5L39 26c.7-4-.3-8.1-2.7-11.4l6.5-4.8Z">
+    </path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 19 18" id="star">
+    <path fill="currentColor" d="M8.7084.8237c.2305-.467.3458-.7004.5022-.775a.5.5 0 0 1 .4304 0c.1564.0746.2717.308.5022.775l2.1866 4.43c.0681.1378.1021.2067.1518.2602a.5016.5016 0 0 0 .1555.113c.0662.0309.1423.042.2944.0642l4.8913.715c.515.0752.7726.1129.8918.2387a.5001.5001 0 0 1 .1327.4093c-.0227.1718-.2091.3534-.582.7166l-3.5381 3.4461c-.1103.1074-.1654.1611-.201.225a.5005.5005 0 0 0-.0595.1831c-.0088.0726.0042.1485.0302.3002l.8348 4.8674c.0881.5134.1321.77.0494.9224a.5001.5001 0 0 1-.3483.2529c-.1704.0316-.4009-.0896-.8619-.332l-4.3727-2.2996c-.1363-.0717-.2044-.1075-.2762-.1216a.5025.5025 0 0 0-.1924 0c-.0718.0141-.14.0499-.2762.1216l-4.3727 2.2996c-.461.2424-.6915.3636-.862.332a.5.5 0 0 1-.3482-.2529c-.0827-.1524-.0387-.4091.0494-.9224l.8348-4.8674c.026-.1517.039-.2276.0302-.3002a.5005.5005 0 0 0-.0595-.1831c-.0356-.0639-.0907-.1176-.201-.225l-3.538-3.446c-.373-.3633-.5594-.5449-.582-.7167a.5.5 0 0 1 .1326-.4093c.1192-.1258.3768-.1635.8918-.2387l4.8913-.715c.1521-.0222.2282-.0333.2944-.0641a.5.5 0 0 0 .1555-.113c.0497-.0536.0837-.1225.1517-.2604l2.1867-4.43Z"></path>
+  </symbol>
+  <symbol fill="none" viewBox="0 0 16 16" id="edit">
+    <g clip-path="url(#a)">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.7 9.3 4M1.7 14.3l2.2-.2.6-.1s.2 0 .3-.2l.4-.3L14 4.7A1.9 1.9 0 1 0 11.3 2l-8.8 8.8-.3.4-.2.3v.6l-.3 2.2Z"></path>
+    </g>
+    <defs>
+      <clipPath id="a">
+        <path fill="#fff" d="M0 0h16v16H0z"></path>
+      </clipPath>
+    </defs>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18" id="search">
+    <g clip-path="url(#a)">
+      <path fill="currentColor" d="M15.8 16.9a.7.7 0 1 0 1-1.1l-1 1ZM13 7.7c0 3-2.4 5.3-5.3 5.3v1.5c3.8 0 6.8-3 6.8-6.8H13ZM7.7 13c-3 0-5.3-2.4-5.3-5.3H1c0 3.8 3 6.8 6.8 6.8V13ZM2.4 7.7c0-3 2.4-5.3 5.3-5.3V1C4 1 1 4 1 7.7h1.5Zm5.3-5.3c3 0 5.3 2.4 5.3 5.3h1.5c0-3.7-3-6.8-6.8-6.8v1.5Zm3.8 10.1 4.3 4.4 1-1.1-4.3-4.3-1 1Z"/>
+    </g>
+    <defs>
+      <clipPath id="a">
+        <path fill="#fff" d="M0 0h18v18H0z"/>
+      </clipPath>
+    </defs>
+  </symbol>
+</svg>

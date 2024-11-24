@@ -1,0 +1,19 @@
+mixin map-small-parts
+  section#small-parts(
+    data-group="Общее"
+    data-name="Мелкие детали",
+  )
+    .container.ui-kit__container
+      .ui-block 
+        h2 Бейдж
+        +badge({text: "Badge"})
+
+      .ui-block 
+        h2 Аватар
+        p 
+          +avatar
+
+      .ui-block 
+        h2 site-logo
+        p 
+          +site-logo

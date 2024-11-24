@@ -1,0 +1,26 @@
+mixin map-form-fields-code
+  section#form-fields-code(
+    data-group="Формы"
+    data-name="Числовой код",
+  )
+    .container.ui-kit__container
+      .ui-block
+        .mb-2
+          +field-code({
+            id: "code-1"
+          })
+        .mb-2
+          +field-code({
+            id: "code-2",
+            className: "_await",
+          })
+        .mb-2
+          +field-code({
+            id: "code-3",
+            className: "_error",
+          })
+        .mb-2
+          +field-code({
+            id: "code-4",
+            className: "_timeout",
+          })

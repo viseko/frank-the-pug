@@ -1,0 +1,19 @@
+@for $i from 1 through 14 {
+  .mb-#{$i} {
+    margin-bottom: #{$i}rem;
+  }
+
+  .mt-#{$i} {
+    margin-top: #{$i}rem;
+  }
+
+  @media (max-width: $sm) {
+    .mb-sm-#{$i} {
+      margin-bottom: #{$i}rem;
+    }
+
+    .mt-sm-#{$i} {
+      margin-top: #{$i}rem;
+    }
+  }
+}

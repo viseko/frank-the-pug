@@ -1,0 +1,17 @@
+mixin field-code(data={})
+  .field-code.js-field-code(
+    class=data.className
+  )
+    input.visually-hidden(type="text" min="1000" max="9999" required id=data.id name="code")
+    label.field-code__cells(for=data.id)
+      span.field-code__cell 
+      span.field-code__cell
+      span.field-code__cell 
+      span.field-code__cell 
+    .field-code__error Неверный код
+    a.field-code__link(href="dummy.html")
+      | Получить новый код 
+      span #{" "} (23 сек)
+    .field-code__spinner
+      +icon("spinner", 48, 48)
+    .field-code__await-text Проверяем код

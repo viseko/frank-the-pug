@@ -1,0 +1,52 @@
+mixin map-typography
+  section#typography(
+    data-group="Общее"
+    data-name="Типографика",
+  )
+    .container.ui-kit__container
+      - var headingText = "Заголовок"
+      - var headingClasses = ["h1", "h2", "h3", "h4", "h5", "h6"]
+      - var pangram = "Съешь ещё этих мягких французских булок да выпей чаю. The quick brown fox jumps over the lazy dog."
+      - 
+        var fonts = [
+          {
+            name: "Comic Sans MS",
+            weights: [400, 700]
+          },
+        ]
+      - 
+        var customClasses = [
+          "text-lead",
+        ]
+
+      //- Заголовки
+      div.ui-block
+        h2 Заголовки
+        each cls in headingClasses 
+          div(class=cls style="margin-bottom: 16px")!=`${headingText}-${cls}`
+      
+      //- Шрифты
+      div.ui-block
+        h2 Шрифты
+        each font in fonts 
+          h3!=font.name 
+          each weight in font.weights 
+            p(style=`font-family: '${font.name}'; font-weight: ${weight}`)!=pangram
+
+      if (customClasses.length)
+        div.ui-block 
+          h2 Кастомные классы
+          each cls in customClasses 
+            p(class=cls) (#{cls}) #{pangram}
+
+      div.ui-block
+        h2 Списки
+        .content-box
+          ul
+            li Маркированный список
+            li Маркированный список
+            li Маркированный список
+          ol
+            li Нумерованный список
+            li Нумерованный список
+            li Нумерованный список

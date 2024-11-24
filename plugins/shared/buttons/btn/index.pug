@@ -1,0 +1,34 @@
+mixin _button-inner(data)
+  if (data.icon)
+    if (data.icon.reverse)
+      +icon(data.icon.name, data.icon.width, data.icon.height)
+      span!=data.text
+    else
+      span!=data.text
+      +icon(data.icon.name, data.icon.width, data.icon.height)
+  else 
+    span!=data.text
+
+mixin btn(data={})
+  if (data.href)
+    a.btn(
+      href=data.href
+      class=data.className
+      class=(data.theme ? `btn--theme--${data.theme}` : null)
+      class=(data.size ? `btn--size--${data.size}` : null)
+      target=(data.blank ? "_blank" : null)
+      rel=(data.blank ? "noopener noreferrer" : null)
+    )&attributes(data.attributes)
+      +_button-inner(data)
+      
+  else
+    button.btn(
+      type=(data.type || "button")
+      class=data.className
+      class=(data.theme ? `btn--theme--${data.theme}` : null)
+      class=(data.size ? `btn--size--${data.size}` : null)
+      disabled=data.disabled,
+      role=data.role
+    )&attributes(data.attributes)
+      +_button-inner(data)
+

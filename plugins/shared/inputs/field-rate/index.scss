@@ -1,0 +1,58 @@
+.rate {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+
+  &__stars {
+    display: flex;
+  }
+
+  &__value {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  &__star {
+    padding: 2px;
+    width: 18px;
+    height: 18px;
+    color: #333;
+    transition: 0.1s;
+
+    &._fill {
+      color: $cl-primary;
+    }
+  }
+
+  &__input:disabled ~ &__star {
+    pointer-events: none;
+  }
+  
+  button {
+    display: flex;
+    padding: 2px;
+    width: 24px;
+    height: 24px;
+    color: #333;
+    border: 0;
+    background: none;
+
+    &:hover:not(:disabled) {
+      color: $cl-primary;
+      background: none;
+    }
+
+    &:active {
+      transform: scale(1.3);
+      opacity: 01;
+    }
+  }
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+}

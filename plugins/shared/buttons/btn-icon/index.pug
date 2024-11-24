@@ -1,0 +1,27 @@
+mixin btn-icon(data={})
+  if (data.href)
+    a.btn-icon(
+      href=data.href
+      class=data.className
+      class=(data.theme ? `btn--${data.theme}` : null)
+      class=(data.size ? `btn--${data.size}` : null)
+      target=(data.blank ? "_blank" : null)
+      rel=(data.blank ? "noopener noreferrer" : null)
+    )
+      if (data.icon)
+        +icon(data.icon, 32, 32)
+      else 
+        block
+  else
+    button.btn-icon(
+      type=(data.type || "button")
+      class=data.className
+      class=(data.theme ? `btn--${data.theme}` : null)
+      class=(data.size ? `btn--${data.size}` : null)
+      disabled=data.disabled,
+      data-role=data.role
+    )
+      if (data.icon)
+        +icon(data.icon.name, data.icon.width, data.icon.height)
+      else 
+        block

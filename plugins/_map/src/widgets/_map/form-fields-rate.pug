@@ -1,0 +1,18 @@
+mixin map-form-fields-rate
+  section#form-fields-rate(
+    data-group="Формы"
+    data-name="Звёзды рейтинга",
+  )
+    .container.ui-kit__container
+      .ui-block
+        .mb-2.flex-center-x.gap-1
+          +field-rate({
+            value: 2,
+          })
+          span Default
+        .mb-2.flex-center-x.gap-1
+          +field-rate({
+            disabled: true,
+            value: 3
+          })
+          span Disabled

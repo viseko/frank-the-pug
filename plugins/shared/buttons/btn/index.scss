@@ -1,0 +1,40 @@
+@import "themes";
+@import "sizes";
+
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 0;
+  border-radius: 8px;
+  color: $cl-black;
+  background-color: lighten($cl-black, 90%);
+  font-size: 16px;
+  line-height: 24px;
+  user-select: none;
+  transition: 
+    background-color 0.3s,
+    color 0.3s;
+
+  @media (max-width: $sm) {
+    padding: 4px 8px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &:hover:not(:disabled) {
+    background-color: lighten($cl-black, 80%);
+  }
+
+  &:active:not(:disabled) {
+    opacity: 0.7;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+}
+
+a.btn {
+  text-decoration: none;
+}

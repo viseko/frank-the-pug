@@ -1,0 +1,10 @@
+mixin field-image(data={})
+  .field-image.js-field-image(
+    class=data.className,
+    class=(data.theme ? `field-image--theme--${data.theme}` : null),
+    class=(data.size ? `field-image--size--${data.size}` : null),
+  )
+    input.field-image__input(type="file", name=data.name)
+    .field-image__preview(data-role="preview")
+    .field-image__btn
+      +icon("edit", 16, 16)

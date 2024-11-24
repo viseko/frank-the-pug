@@ -1,0 +1,19 @@
+.nav-link {
+  padding: 16px;
+  color: $cl-primary;
+  font-size: 18px;
+  line-height: 13px;
+  text-decoration: none;
+  background-color: transparent;
+  border-radius: 12px;
+  user-select: none;
+  transition: color 0.3s;
+
+  &[href] {
+    color: $cl-black;
+
+    &:hover {
+      color: $cl-primary;
+    }
+  }
+}

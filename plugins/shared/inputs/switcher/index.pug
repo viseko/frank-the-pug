@@ -1,0 +1,11 @@
+mixin switcher(data={})
+  label.switcher(class=data.className)
+    input.switcher__input.visually-hidden(
+      type="checkbox",
+      name=data.name,
+      checked=data.checked
+      disabled=data.disabled
+    )
+    .switcher__inner
+    if (data.label)
+      .switcher__label!=data.label

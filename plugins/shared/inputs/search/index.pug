@@ -1,0 +1,19 @@
+mixin search(data={})
+  form.search.js-search(
+    class=data.className,
+    class=(data.theme ? `search--theme--${data.theme}` : null),
+    class=(data.size ? `search--size--${data.size}` : null),
+    data-role=data.role,
+  )
+    .search__icon
+      +icon("search", 16, 16)
+    input.search__input(
+      type="search",
+      name=(data.name || "search"),
+      placeholder=data.placeholder,
+      autocomplete="off",
+      required
+    )
+    button.search__reset(type="reset")
+      span.visually-hidden Очистить поле
+      +icon("close", 16, 16)

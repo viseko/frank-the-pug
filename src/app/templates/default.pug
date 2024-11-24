@@ -1,0 +1,47 @@
+include ../../widgets/index
+include ../../shared/index
+
+block vars
+
+doctype html
+html(lang="ru")
+  head
+    //- Заголовок страницы
+    title=title
+
+    //- Мета-данные
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    block meta
+
+    //- Стили
+    link(rel="stylesheet", href="assets/css/main.min.css")
+    block styles
+
+    //- Манифест
+    //- link(rel="manifest", href="manifest.json")
+
+    //- Favicons
+    //- link(rel="icon", href="favicon.svg")
+    //- link(rel="icon", href="mask-icon.svg", color="#000000")
+    //- link(rel="apple-touch-icon", href="apple-touch-icon.png")
+    
+  body
+    .page
+      //- Шапка
+      +page-header
+
+      //- Основное содержимое
+      main.page__main
+        block body
+      
+      //- Футер
+      +page-footer
+      
+      //- Модальные окна
+      block modals
+
+    //- Скрипты 
+    script(src="assets/js/main.min.js") 
+    block scripts

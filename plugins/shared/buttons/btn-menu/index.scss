@@ -1,0 +1,84 @@
+.btn-menu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+
+  span {
+    width: 21px;
+    height: 2px;
+    background-color: $cl-black;
+
+    &:nth-child(2) {
+      transition: transform 0.5s, background-color 0.3s;
+    }
+
+    &:nth-child(1),
+    &:nth-child(3) {
+      animation-duration: 1s;
+      animation-direction: reverse;
+      transition: transform 0.5s, background-color 0.3s, opacity 0.01s;
+      transition-delay: 0.5s, 0s, 0.5s;
+    }
+
+    &:nth-child(4),
+    &:nth-child(5) {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: transform 0.5s, background-color 0.3s, opacity 0.01s;
+      transition-delay: 0s, 0s, 0.5s;
+      opacity: 0;
+    }
+
+    body._menu-open & {
+      &:nth-child(1) {
+        transform: translateY(6px);
+        opacity: 0;
+      }
+
+      &:nth-child(2) {
+        transform: scaleX(0);
+      }
+
+      &:nth-child(3) {
+        transform: translateY(-6px);
+        opacity: 0;
+      }
+
+      &:nth-child(1),
+      &:nth-child(3) {
+        transition-delay: 0s, 0s, 0.5s;
+      }
+
+      &:nth-child(4),
+      &:nth-child(5) {
+        transition-delay: 0.5s, 0s, 0.5s;
+      }
+
+      &:nth-child(4) {
+        transform: translate(-50%, -50%) rotate(45deg);
+        opacity: 1;
+      }
+
+      &:nth-child(5) {
+        transform: translate(-50%, -50%) rotate(-45deg);
+        opacity: 1;
+      }
+    }
+  }
+
+  &:hover span {
+    &:nth-child(2) {
+      transform: scaleX(0.5);
+    }
+  }
+}

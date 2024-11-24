@@ -1,0 +1,27 @@
+mixin field-date(data={})
+  .field.field--date.js-field-date(class=data.className)
+    input.field__input(
+      type="text",
+      data-role="input",
+      autocomplete="off",
+      value=data.value
+      name=data.name,
+      required=data.required
+      disabled=data.disabled
+    )
+    .field__date-output(data-role="output")!=data.placeholder
+    if (data.errorElem)
+      .field__error(data-role="error")=data.errorText
+
+mixin field-date-single(data={})
+  .field.field--date.field--date-single.js-field-date-single(class=data.className)
+    input.field__input(
+      type="text"
+      data-role="input"
+      autocomplete="off"
+      name=data.name
+      disabled=data.disabled
+    )
+    .field__date-output(data-role="output")!=data.placeholder
+    if (data.errorElem || data.errorText)
+      .field__error(data-role="error")=data.errorText

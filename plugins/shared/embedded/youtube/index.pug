@@ -1,0 +1,18 @@
+mixin youtube(data={})
+  .youtube.js-youtube(
+    data-id=data.id,
+    data-start=data.start,
+    class=data.className,
+    class=(data.theme ? `youtube--theme--${data.theme}` : null),
+    data-role=data.role,
+  )
+    if (data.preview)
+      img.youtube__preview(
+        src=data.preview
+        srcset=data.preview2x
+        title=""
+      )
+    a.youtube__play(href=`https://youtu.be/${data.id}` target="_blank" rel="noopener noreferrer") 
+      .youtube__play-button
+        span.youtube__play-icon 
+          +icon("play", 27, 31)

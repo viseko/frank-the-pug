@@ -1,0 +1,7 @@
+/node_modules/
+/gulp/version.json
+/build/
+/src-old/
+.DS_Store
+.idea
+gulp/config/ftp.js

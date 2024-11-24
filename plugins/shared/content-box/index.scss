@@ -1,0 +1,128 @@
+.content-box {
+  figure,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  blockquote,
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  figure {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 40px 0;
+
+    @media (max-width: $sm) {
+      gap: 8px;
+      margin: 24px 0;
+    }
+
+    img {
+      align-self: center;
+    }
+  }
+
+  figcaption {
+    font-size: 16px;
+    line-height: 32px;
+
+    @media (max-width: $sm) {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+
+    @media (max-width: $sm) {
+      border-radius: 12px;
+    }
+  }
+
+  img._full {
+    width: 100%;
+  }
+
+  h2 {
+    margin: 64px 0 24px;
+    font-size: 40px;
+    line-height: 48px;
+
+    @media (max-width: $sm) {
+      margin: 32px 0 16px;
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+
+  h3 {
+    margin: 56px 0 24px;
+    font-size: 32px;
+    line-height: 40px;
+
+    @media (max-width: $sm) {
+      margin: 24px 0 16px;
+      font-size: 20px;
+      line-height: 32px;
+    }
+  }
+
+  h4 {
+    margin: 48px 0 24px;
+    font-size: 24px;
+    line-height: 32px;
+
+    @media (max-width: $sm) {
+      margin: 24px 0 16px;
+    }
+  }
+
+  h5 {
+    margin: 40px 0 24px;
+    font-size: 20px;
+    line-height: 32px;
+
+    @media (max-width: $sm) {
+      margin: 24px 0 16px;
+    }
+  }
+
+  h6 {
+    margin: 32px 0 24px;
+    font-size: 18px;
+    line-height: 32px;
+
+    @media (max-width: $sm) {
+      margin: 24px 0 16px;
+      font-size: 18px;
+      line-height: 32px;
+    }
+  }
+
+  blockquote {
+    margin: 48px 0 40px;
+
+    @media (max-width: $sm) {
+      margin: 24px 0;
+    }
+  }
+
+  audio,
+  p {
+    margin: 16px 0;
+  }
+}

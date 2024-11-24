@@ -1,0 +1,71 @@
+mixin map-buttons
+  section#buttons(
+    data-group="Общее"
+    data-name="Кнопки и ссылки",
+  )
+    .container.ui-kit__container
+      .ui-block 
+        p
+          +a({
+            href: "#",
+            text: "Простая ссылка"
+          })
+        p
+          button Простая кнопка
+
+      .ui-block 
+        h2 btn 
+        .ui-flex
+          +btn({
+            text: "Кнопка"
+          })
+          +btn({
+            href: "#",
+            text: "Ссылка"
+          })
+          +btn({
+            disabled: true,
+            text: "Disabled"
+          })
+      
+      .ui-block 
+        h2 btn-icon
+        .ui-flex
+          +btn-icon
+            svg(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 512 512')
+              path(fill="currentColor" d='M256 48C141.6 48 48 141.6 48 256s93.6 208 208 208 208-93.6 208-208S370.4 48 256 48zm-42.7 318.9L106.7 260.3l29.9-29.9 76.8 76.8 162.1-162.1 29.9 29.9-192.1 191.9z')
+          +btn-icon({disabled: true})
+            svg(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 512 512')
+              path(fill="currentColor" d='M256 48C141.6 48 48 141.6 48 256s93.6 208 208 208 208-93.6 208-208S370.4 48 256 48zm-42.7 318.9L106.7 260.3l29.9-29.9 76.8 76.8 162.1-162.1 29.9 29.9-192.1 191.9z')
+
+      .ui-block 
+        h2 btn-menu 
+        +btn-menu
+
+      .ui-block 
+        h2 btn-more 
+        p 
+          +btn-more({text: "Ссылка", href: "#"})
+        p 
+          +btn-more({text: "Кнопка"})
+        p 
+          +btn-more({text: "Disabled", disabled: true})
+
+      .ui-block 
+        h2 nav-link
+        .ui-flex
+          +nav-link({text: "Пункт меню", href: "#"})
+          +nav-link({text: "Активный пункт"})
+
+      .ui-block 
+        h2 pagination 
+        +pagination
+
+      .ui-block 
+        h2 breadcrumbs
+        +breadcrumbs({
+          list: [
+            ["Статьи", "#"],
+            ["Название статьи"]
+          ]
+        })

@@ -1,0 +1,27 @@
+.breadcrumbs {
+  --divider: "/";
+
+  display: flex;
+  gap: 8px;
+
+  &__item {
+    display: flex;
+    gap: 8px;
+    font-size: 2rem;
+    line-height: 3rem;
+
+    @media (max-width: $sm) {
+      font-size: 12px;
+    }
+
+    &:not(:last-child)::after {
+      content: var(--divider);
+    }
+  }
+
+  &__link {
+    @include hover {
+      opacity: 0.9;
+    }
+  }
+}

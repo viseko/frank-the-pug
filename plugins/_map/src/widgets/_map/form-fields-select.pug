@@ -1,0 +1,15 @@
+mixin map-form-fields-select
+  section#form-fields-select(
+    data-group="Формы"
+    data-name="Селект",
+  )
+    .container.ui-kit__container
+      .ui-block
+        .mb-2
+          +select({
+            list: [
+              "Вариант 1",
+              "Вариант 2",
+              "Вариант 3"
+            ]
+          })

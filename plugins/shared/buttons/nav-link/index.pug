@@ -1,0 +1,5 @@
+mixin nav-link(data={})
+  if (!data.href || (page === data.href.replace(".html", "")))
+    .nav-link!=data.text
+  else 
+    a.nav-link(href=data.href)!=data.text

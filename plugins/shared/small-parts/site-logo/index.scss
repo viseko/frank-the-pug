@@ -1,0 +1,12 @@
+.site-logo {
+  padding: 1rem;
+  color: $cl-black;
+  font-size: 24px;
+  line-height: 24px;
+  border-radius: 6px;
+  background-color: rgba($cl-black, 10%);
+
+  &[href] {
+    text-decoration: none;
+  }
+ }

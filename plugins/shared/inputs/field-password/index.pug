@@ -1,0 +1,24 @@
+//- Поле ввода пароля
+mixin field-password(data)
+  .field.field--padding-right.js-input-password(
+    class=data.classList
+    class=(data.placeholderOuter ? "field--placeholder" : null)
+  )
+    input.field__input(
+      type="password"
+      name=data.name || "password"
+      required
+      data-repeat=data.repeat
+      placeholder=data.placeholder
+      id=data.id
+    )
+    if (data.floatPlaceholder)
+      .field__placeholder!=data.floatPlaceholder
+    if (data.errorElem)
+      .field__error(data-role="error")=data.errorText
+    button.field__password-button(type="button")
+      span.visually-hidden Скрыть/показать пароль
+      span.field__password-icon.field__password-icon--show 
+        +icon("eye-off", 24, 24)
+      span.field__password-icon.field__password-icon--hide
+        +icon("eye", 24, 24)

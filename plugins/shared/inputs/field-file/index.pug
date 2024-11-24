@@ -1,0 +1,23 @@
+mixin field-file(data={})
+  .field-file.js-field-file(
+    class=data.className,
+    class=(data.theme ? `field-file--theme--${data.theme}` : null),
+    class=(data.size ? `field-file--size--${data.size}` : null),
+    data-role=data.role,
+  )
+    .field-file__field
+      span <strong>Добавьте</strong> или перетащите сюда файлы
+      input.field-file__input(
+        type="file",
+        name=data.name,
+        multiple)
+      svg(xmlns='http://www.w3.org/2000/svg' width="100%" height="100%" fill='none' preserveAspectRatio='none')
+        rect(width='100%' height='100%' x='0' y='0' fill='none' stroke='#E7E1E1' stroke-dasharray='4 4' rx='5.5')
+    .field-file__list(data-role="list")
+    template(data-role="template")
+      .field-file__list-item
+        span.field-file__list-item-name(data-role="filename")
+        button.field-file__list-item-remove(data-role="remove" type="button" title="Удалить из списка")
+          +icon("close", 16, 16)
+
+  

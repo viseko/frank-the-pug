@@ -1,0 +1,46 @@
+include ../../widgets/index
+include ../../shared/index
+include ../../widgets/_map/_index
+
+block vars
+
+doctype html
+html(lang="ru")
+  head
+    //- Заголовок страницы
+    title Карта вёрстки
+
+    //- Мета-данные
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    block meta
+
+    //- Стили
+    link(rel="stylesheet", href="assets/css/main.min.css")
+    link(rel="stylesheet", href="assets/_map/index.css")
+    block styles
+
+    //- Favicons
+    link(rel="icon", href="favicon.svg")
+    link(rel="icon", href="mask-icon.svg", color="#000000")
+    link(rel="apple-touch-icon", href="apple-touch-icon.png")
+    
+  body
+    .ui-kit.js-ui-kit
+      .ui-kit__aside
+        .ui-kit__aside-inner
+        button.ui-kit__aside-button
+          span 
+          span 
+          span 
+      .ui-kit__main
+        .ui-kit__header
+          .container
+            .ui-kit__title
+        block map
+    
+      .ui-kit__overlay
+    //- Скрипты 
+    script(src="assets/js/main.min.js")
+    script(src="assets/_map/index.js") 

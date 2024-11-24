@@ -1,0 +1,9 @@
+@mixin remove-scrollbar {
+  @media (hover: none) {
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

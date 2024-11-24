@@ -1,0 +1,27 @@
+mixin field-rate(data={})
+  .rate.js-field-rate(
+    class=data.className,
+    class=(data.theme ? `field-rate--theme--${data.theme}` : null),
+    class=(data.size ? `field-rate--size--${data.size}` : null),
+    data-role=data.role,
+  )
+    .rate__stars
+      input.rate__input.visually-hidden(
+        type="number",
+        name=("rate" || data.name),
+        min="1",
+        max="5",
+        value=data.value,
+        required=data.required,
+        disabled=data.disabled
+      )
+      button.rate__star(type="button") 
+        +icon("star", 24, 24)
+      button.rate__star(type="button") 
+        +icon("star", 24, 24)
+      button.rate__star(type="button")  
+        +icon("star", 24, 24)
+      button.rate__star(type="button")  
+        +icon("star", 24, 24)
+      button.rate__star(type="button")  
+        +icon("star", 24, 24)

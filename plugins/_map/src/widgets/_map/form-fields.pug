@@ -1,0 +1,130 @@
+mixin map-form-fields
+  section#form-fields(
+    data-group="Формы"
+    data-name="Поля ввода",
+  )
+    .container.ui-kit__container
+      .ui-block 
+        h2 Текстовые поля: типы
+        .mb-2
+          +field({
+            type: "text",
+            placeholder: "Текст",
+            errorElem: true,
+          })
+        .mb-2
+          +field({
+            type: "email",
+            placeholder: "Email",
+            errorElem: true,
+          })
+        .mb-2
+          +field({
+            type: "tel",
+            placeholder: "Телефон",
+            errorElem: true,
+          })
+        .mb-2
+          +field({
+            type: "textarea",
+            placeholder: "Textarea"
+          })
+        .mb-2
+          +field({
+            type: "number",
+            placeholder: "Число",
+            errorElem: true,
+          })
+        .mb-2
+          +field({
+            type: "number",
+            placeholder: "Число c ед. измерения",
+            errorElem: true,
+            min: 0,
+            max: 100,
+            unit: "кг/м"
+          })
+
+      .ui-block 
+        h2 Текстовые поля: статусы 
+        .mb-2
+          +field({
+            placeholder: "default"
+          })
+        .mb-2
+          +field({
+            placeholder: "disabled",
+            disabled: true
+          })
+        .mb-2
+          +field({
+            className: "_success",
+            placeholder: "success"
+          })
+        .mb-2
+          +field({
+            className: "_error",
+            placeholder: "error",
+            errorElem: true,
+            errorText: "Какой-то текст ошибки"
+          })
+      .ui-block
+        h2 Счётчик
+        .mb-2
+          +counter({
+            min: 5,
+            max: 10
+          })
+        .mb-2
+          +counter({
+            min: 5,
+            max: 10,
+            disabled: true,
+          })
+      .ui-block
+        h2 Ввод пароля
+        .mb-2
+          +field-password({
+            id: "demo-pass",
+            placeholder: "Пароль",
+            errorElem: true,
+          })
+        .mb-2
+          +field-password({
+            repeat: "demo-pass",
+            placeholder: "Повторите пароль",
+            errorElem: true,
+          })
+      .ui-block
+        h2 Ввод даты
+        h3 Одиночная дата
+        .mb-2 
+          +field-date-single({
+            placeholder: "Выберите дату"
+          })
+        .mb-2 
+          +field-date-single({
+            disabled: true,
+            placeholder: "Выберите дату"
+          })
+        .mb-2 
+          +field-date-single({
+            className: "_error",
+            errorElem: true,
+            errorText: "Какой-то текст ошибки"
+          })
+        .mb-2
+          +field-date-single({className: "_success"})
+        h3 Диапазон
+        .mb-2
+          +field-date
+        .mb-2
+          +field-date({disabled: true})
+        .mb-2
+          +field-date({
+            className: "_error",
+            errorElem: true,
+            errorText: "Какой-то текст ошибки"
+          })
+        .mb-2
+          +field-date({className: "_success"})

@@ -1,0 +1,35 @@
+mixin map-form-validation
+  section#form-validation(
+    data-group="Формы"
+    data-name="Валидация",
+  )
+    .container.ui-kit__container
+      .ui-bloc 
+        +form({success: true, className: "pos-rel"})
+          .flex-column.gap-3
+            .grid-3.grid-lg-2.grid-sm-1.gap-x-1.gap-y-2
+              +field({
+                placeholder: "Имя*",
+                name: "name",
+                required: true,
+                errorElem: true
+              })
+              +field({
+                placeholder: "email*",
+                name: "email",
+                required: true,
+                type: "email",
+                errorElem: true
+              })
+              +field({
+                placeholder: "телефон*",
+                name: "tel",
+                required: true,
+                type: "tel",
+                errorElem: true
+              })
+            .flex-center-y 
+              +btn({
+                type: "submit",
+                text: "Отправить"
+              })

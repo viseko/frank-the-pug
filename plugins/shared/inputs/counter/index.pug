@@ -1,0 +1,29 @@
+mixin counter(data={})
+  .counter.js-counter(class=data.className)
+    button.counter__btn.counter__btn--less(
+      type='button'
+      data-role="minus"
+      disabled=data.disabled
+    )
+      span.visually-hidden Меньше
+      span –
+    input.counter__input(
+      type='number'
+      id=data.id
+      name=data.name
+      value=data.value
+      required=data.required
+      step=data.step
+      min=data.min 
+      max=data.max
+      data-allowed=data.allowed
+      disabled=data.disabled
+    )
+    button.counter__btn.counter__btn--more(
+      type='button'
+      data-role="plus"
+      disabled=data.disabled
+    )
+      span.visually-hidden Больше
+      span +
+  

@@ -1,0 +1,75 @@
+.search {
+  position: relative;
+
+  &__icon {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: #333;
+    
+    svg {
+      display: block;
+    }
+
+    @media (max-width: $sm) {
+      top: 12px;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding: 11px 55px 11px 39px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    background-color: $cl-white;
+    outline: 0;
+    font-size: 2rem;
+    line-height: 3rem;
+    transition: $bezier 0.3s background-color, $bezier 0.3s border-color;
+
+    @media (max-width: $sm) {
+      padding: 7px 15px 7px 39px;
+      font-size: 14px;
+    }
+
+    &::placeholder {
+      color: #333;
+    }
+
+    &:focus {
+      border-color: $cl-black;
+      background-color: $cl-white;
+    }
+  }
+
+  &__reset {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: transparent;
+    pointer-events: none;
+    transition: color $bezier 0.3s;
+
+    @media (max-width: $sm) {
+      top: 8px;
+    }
+
+    &:hover:not(:disabled) {
+      background: none;
+      color: $cl-primary;
+    }
+  }
+
+  &._has-value &__reset {
+    color: $cl-black;
+    pointer-events: all;
+  }
+}

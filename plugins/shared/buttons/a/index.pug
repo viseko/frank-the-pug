@@ -1,0 +1,8 @@
+mixin a(data={})
+  a(
+    href=data.href
+    class=data.className
+    target=(data.blank ? "_blank" : null)
+    rel=(data.blank ? "noopener noreferrer" : null)
+  )&attributes(data.attributes)
+    !=data.text

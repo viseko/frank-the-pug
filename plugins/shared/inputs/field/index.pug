@@ -1,0 +1,41 @@
+mixin field(data)
+  .field(
+    class=data.className,
+    class=(data.type === "textarea" ? "field--textarea" : null)
+    class=(data.floatPlaceholder === "textarea" ? "field--placeholder" : null)
+    class=(!data.type || (data.type === "text") || (data.type === "textarea") ? "js-input" : null)
+    class=(data.type === "tel" ? "js-input-phone" : null)
+    class=(data.type === "email" ? "js-input-email" : null)
+    class=(data.type === "number" ? "js-input-number" : null)
+  )
+    if (data.type === "textarea")
+      textarea.field__input.field__input--textarea(
+        id=data.id,
+        name=data.name,
+        required=data.required,
+        placeholder!=data.placeholder,
+        autocomplete="off",
+        disabled=data.disabled,
+        minlength=data.minLength,
+        maxlength=data.maxlength,
+      )=data.value
+    else 
+      input.field__input(
+        type=(data.type || "text"),
+        id=data.id,
+        name=data.name,
+        required=data.required,
+        value=data.value,
+        placeholder!=data.placeholder,
+        disabled=data.disabled,
+        minlength=data.minLength,
+        maxlength=data.maxlength,
+        data-unit=data.unit
+        min=data.min,
+        max=data.max
+        data-repeat=data.repeat
+      )
+    if (data.floatPlaceholder)
+      .field__placeholder!=data.floatPlaceholder
+    if (data.errorElem)
+      .field__error(data-role="error")=data.errorText

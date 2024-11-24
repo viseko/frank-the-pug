@@ -1,0 +1,20 @@
+mixin select(data={})
+  .select.js-select(
+    class=data.className,
+    class=(data.theme ? `select--theme--${data.theme}` : null),
+    class=(data.size ? `select--size--${data.size}` : null),
+    data-role=data.role,
+  )
+    select.select__input(name=data.name data-role="select") 
+      option(value=data.list[0] selected)=data.list[0]
+      each val in data.list.slice(1)
+        option(value=val)=val
+    button.select__btn(data-role="btn" type="button")
+      span.select__value(data-role="value")=data.list[0]
+      .select__icon 
+        +icon("chevron-down", 16, 16)
+    .select__list.dropdown(data-role="list")
+      button.dropdown__item(data-value=data.list[0] disabled type="button")=data.list[0]
+      each val in data.list.slice(1)
+        button.dropdown__item(data-value=val type="button")=val
+    

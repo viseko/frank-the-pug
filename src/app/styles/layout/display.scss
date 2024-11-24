@@ -1,0 +1,169 @@
+.d-none[class] {
+  display: none;
+}
+
+.d-xl-none[class] {
+  @media (max-width: $xl) {
+    display: none;
+  }
+}
+
+.d-lg-none[class] {
+  @media (max-width: $lg) {
+    display: none;
+  }
+}
+
+.d-md-none[class] {
+  @media (max-width: $md) {
+    display: none;
+  }
+}
+
+.d-sm-none[class] {
+  @media (max-width: $sm) {
+    display: none;
+  }
+}
+
+.d-xs-none[class] {
+  @media (max-width: $xs) {
+    display: none;
+  }
+}
+
+.d-flex[class] {
+  display: flex;
+}
+
+.d-xl-flex[class] {
+  @media (max-width: $xl) {
+    display: flex;
+  }
+}
+
+.d-lg-flex[class] {
+  @media (max-width: $lg) {
+    display: flex;
+  }
+}
+
+.d-md-flex[class] {
+  @media (max-width: $md) {
+    display: flex;
+  }
+}
+
+.d-sm-flex[class] {
+  @media (max-width: $sm) {
+    display: flex;
+  }
+}
+
+.d-xs-flex[class] {
+  @media (max-width: $xs) {
+    display: flex;
+  }
+}
+
+.d-block[class] {
+  display: block;
+}
+
+.d-xl-block[class] {
+  @media (max-width: $xl) {
+    display: block;
+  }
+}
+
+.d-lg-block[class] {
+  @media (max-width: $lg) {
+    display: block;
+  }
+}
+
+.d-md-block[class] {
+  @media (max-width: $md) {
+    display: block;
+  }
+}
+
+.d-sm-block[class] {
+  @media (max-width: $sm) {
+    display: block;
+  }
+}
+
+.d-xs-block[class] {
+  @media (max-width: $xs) {
+    display: block;
+  }
+}
+
+.d-inline[class] {
+  display: inline;
+}
+
+.d-xl-inline[class] {
+  @media (max-width: $xl) {
+    display: inline;
+  }
+}
+
+.d-lg-inline[class] {
+  @media (max-width: $lg) {
+    display: inline;
+  }
+}
+
+.d-md-inline[class] {
+  @media (max-width: $md) {
+    display: inline;
+  }
+}
+
+.d-sm-inline[class] {
+  @media (max-width: $sm) {
+    display: inline;
+  }
+}
+
+.d-xs-inline[class] {
+  @media (max-width: $xs) {
+    display: inline;
+  }
+}
+
+.d-inline-block[class] {
+  display: inline-block;
+}
+
+.d-xl-inline-block[class] {
+  @media (max-width: $xl) {
+    display: inline-block;
+  }
+}
+
+.d-lg-inline-block[class] {
+  @media (max-width: $lg) {
+    display: inline-block;
+  }
+}
+
+.d-md-inline-block[class] {
+  @media (max-width: $md) {
+    display: inline-block;
+  }
+}
+
+.d-sm-inline-block[class] {
+  @media (max-width: $sm) {
+    display: inline-block;
+  }
+}
+
+.d-xs-inline-block[class] {
+  @media (max-width: $xs) {
+    display: inline-block;
+  }
+}

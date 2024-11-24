@@ -1,0 +1,10 @@
+mixin _logo-inner
+  span SomeLogo
+    
+mixin site-logo(data={})
+  if (page === "index")
+    .site-logo(class=data.className)
+      +_logo-inner
+  else 
+    a.site-logo(class=data.className href="index.html")
+      +_logo-inner

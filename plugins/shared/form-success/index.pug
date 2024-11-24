@@ -1,0 +1,8 @@
+mixin form-success(data={})
+  .form-success(
+    class=data.className,
+    class=(data.theme ? `form-success--theme--${data.theme}` : null),
+    class=(data.size ? `form-success--size--${data.size}` : null),
+    data-role=data.role,
+  )
+    .form-success__title Отправлено!
