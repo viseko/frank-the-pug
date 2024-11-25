@@ -1,11 +1,8 @@
 {
   "name": "frank-the-pug",
-  "version": "1.1.2",
-  "description": "Boilerplate for Pug layout",
-  "main": "index.js",
-  "bin": {
-    "frank-the-pug": "index.js"
-  },
+  "version": "1.1.0",
+  "main": "gulpfile.js",
+  "type": "module",
   "scripts": {
     "start": "gulp",
     "dev": "gulp build --dev",
@@ -15,7 +12,6 @@
   },
   "author": "Viktor Konovalov",
   "license": "ISC",
-  "dependencies": {},
   "devDependencies": {
     "browser-sync": "latest",
     "del": "^7.0.0",
@@ -46,10 +42,5 @@
     "vinyl-ftp": "latest",
     "webpack": "latest",
     "webpack-stream": "latest"
-  },
-  "keywords": [
-    "boilerplate",
-    "pug",
-    "npx"
-  ]
+  }
 }
