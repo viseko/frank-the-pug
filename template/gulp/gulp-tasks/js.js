@@ -1,8 +1,8 @@
 import webpack from "webpack-stream";
 import uglify from "gulp-uglify";
 import plumber from "gulp-plumber";
-import notify from "gulp-notify"; // Сообщения (подсказки)
-import browsersync from "browser-sync"; // Локальный сервер
+import notify from "gulp-notify";
+import browsersync from "browser-sync";
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -10,8 +10,22 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-export const js = () => {
+// Конфигурация Webpack
+const webpackConfig = {
+  mode: app.isDev ? "development" : "production",
+  output: {
+    filename: "main.min.js",
+  },
+  resolve: {
+    extensions: [".js"],
+    alias: {
+      "@": path.resolve(__dirname, "../../src"),
+    },
+    mainFiles: ["index"]
+  },
+};
 
+export const js = () => {
   return app.gulp
     .src(app.path.src.js, { sourcemaps: app.isDev })
     .pipe(
@@ -22,20 +36,7 @@ export const js = () => {
         })
       )
     )
-    .pipe(
-      webpack({
-        mode: app.isDev ? "development" : "production",
-        output: {
-          filename: "main.min.js",
-        },
-        resolve: {
-          extensions: [".js"],
-          alias: {
-            "@": path.resolve(__dirname, "../../src"),
-          },
-        },
-      })
-    )
+    .pipe(webpack(webpackConfig))
     .pipe(uglify())
     .pipe(app.gulp.dest(app.path.build.js))
     .pipe(browsersync.stream());

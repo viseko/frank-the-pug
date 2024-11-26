@@ -1,8 +1,8 @@
 import pug from "gulp-pug";
 import replace from "gulp-replace";
 import plumber from "gulp-plumber";
-import notify from "gulp-notify"; // Сообщения (подсказки)
-import browsersync from "browser-sync"; // Локальный сервер
+import notify from "gulp-notify";
+import browsersync from "browser-sync";
 
 export const pughtml = () => {
 	const timestamp = Date.now().toString(32);
@@ -19,7 +19,7 @@ export const pughtml = () => {
 		verbose: true // В терминале какой файл обработан
 	}))
 	.pipe(replace(/@img\//g, 'assets/img/'))
-	// Заменяем конструкции типа data-attr="data-attr" на data-attr (фикс бага Pug для правильной работы fancybox)
+	// Заменяем конструкции типа data-attr="data-attr" на data-attr (фикс для правильной работы fancybox)
 	.pipe(replace(/data-.+?="data.+?"/gm, (match) => {
 		const attr = match.replace(/=".+?"/g, "");
 		const val = match.match(/".+"/g)[0].replace(/"/g, "");
@@ -28,6 +28,7 @@ export const pughtml = () => {
 	// Таймстампы для решения проблемы с кешированием
 	.pipe(replace(/assets\/js\/main\.min\.js/g, `assets/js/main.min.js?v=${timestamp}`))
 	.pipe(replace(/assets\/css\/main\.min\.css/g, `assets/css/main.min.css?v=${timestamp}`))
+	.pipe(replace(/sprite\.svg\#/g, `sprite.svg?v=${timestamp}#`))
 	.pipe(app.gulp.dest(app.path.build.pug))
 	.pipe(browsersync.stream());
 }

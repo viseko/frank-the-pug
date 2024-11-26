@@ -8,7 +8,8 @@
     "dev": "gulp build --dev",
     "build": "gulp build --build",
     "zip": "gulp deployZIP --build",
-    "ftp": "gulp deploy --build"
+    "ftp": "gulp deploy --build",
+    "imports": "node add-imports.js"
   },
   "author": "Viktor Konovalov",
   "license": "ISC",
