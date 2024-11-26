@@ -1,4 +1,4 @@
-![[frank.png]]
+![](frank.png)
 ## Основные концепции
 1) Архитектурная методология [Feature Sliced Design](https://feature-sliced.design/ru/), насколько это возможно для html-вёрстки.
 2) БЭМ
