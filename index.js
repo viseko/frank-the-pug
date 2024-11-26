@@ -53,13 +53,11 @@ try {
   console.log(`Copied files from ${templateDir} to ${targetDir}`);
 
   // Переименование gitignore.template в .gitignore
-  const gitignoreSrc = path.join(templateDir, "gitignore.template");
+  const gitignoreSrc = path.join(targetDir, "gitignore.template");
   const gitignoreDest = path.join(targetDir, ".gitignore");
   if (fs.existsSync(gitignoreSrc)) {
-    fs.copyFileSync(gitignoreSrc, gitignoreDest);
-    console.log("Copied and renamed gitignore.template to .gitignore");
-    fs.unlinkSync(gitignoreSrc); // Удаление gitignore.template
-    console.log("Removed gitignore.template");
+    fs.renameSync(gitignoreSrc, gitignoreDest);
+    console.log("Renamed gitignore.template to .gitignore");
   }
 
   // Переименование !ftp.js в ftp.js
