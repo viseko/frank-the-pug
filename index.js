@@ -60,12 +60,12 @@ try {
     console.log("Renamed gitignore.template to .gitignore");
   }
 
-  // Переименование !ftp.js в ftp.js
+  // Копирование !ftp.js как ftp.js
   const ftpConfigSrc = path.join(targetDir, "gulp", "config", "!ftp.js");
   const ftpConfigDest = path.join(targetDir, "gulp", "config", "ftp.js");
   if (fs.existsSync(ftpConfigSrc)) {
-    fs.renameSync(ftpConfigSrc, ftpConfigDest);
-    console.log("Renamed !ftp.js to ftp.js");
+    fs.copyFileSync(ftpConfigSrc, ftpConfigDest);
+    console.log("Copied !ftp.js to ftp.js");
   }
 
   // Обновление поля "name" в package.json
