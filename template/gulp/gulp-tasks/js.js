@@ -11,7 +11,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Конфигурация Webpack
-const webpackConfig = {
+const createWebpackConfig = (app) => ({
   mode: app.isDev ? "development" : "production",
   output: {
     filename: "main.min.js",
@@ -21,9 +21,8 @@ const webpackConfig = {
     alias: {
       "@": path.resolve(__dirname, "../../src"),
     },
-    mainFiles: ["index"]
   },
-};
+});
 
 export const js = () => {
   return app.gulp
@@ -36,7 +35,7 @@ export const js = () => {
         })
       )
     )
-    .pipe(webpack(webpackConfig))
+    .pipe(webpack(createWebpackConfig(app)))
     .pipe(uglify())
     .pipe(app.gulp.dest(app.path.build.js))
     .pipe(browsersync.stream());
