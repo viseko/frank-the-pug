@@ -58,6 +58,8 @@ try {
   if (fs.existsSync(gitignoreSrc)) {
     fs.copyFileSync(gitignoreSrc, gitignoreDest);
     console.log("Copied and renamed gitignore.template to .gitignore");
+    fs.unlinkSync(gitignoreSrc); // Удаление gitignore.template
+    console.log("Removed gitignore.template");
   }
 
   // Переименование !ftp.js в ftp.js
